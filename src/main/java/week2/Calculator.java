@@ -1,10 +1,11 @@
 package week2;
 
 import java.util.Scanner;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Calculator {
-    private static final Logger logger = Logger.getLogger(Calculator.class.getName());
+    private static Logger logger = Logger.getLogger(Calculator.class.getName());
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -32,7 +33,7 @@ public class Calculator {
             return;
         }
 
-        logger.info("Result: " + result);
+        logger.log(Level.INFO,"Result: {0}" , result);
         sc.close();
     }
 
